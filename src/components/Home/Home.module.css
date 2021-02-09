@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addListIcon {
+  padding: 16px;
+}
+.settingsIcon {
+  padding: 16px;
+}
+.balanceBlock {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 415px;
+  height: 73px;
+  background-color: green;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.balanceList {
+  position: absolute;
+  left: 0;
+  top: 137px;
+  width: 415px;
+  height: 658px;
+}

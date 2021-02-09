@@ -1,2 +1,3 @@
-export { default as Button } from './Button';
-export { default as Pays } from './Pays';
+export { default as Home } from './Home/Home';
+export { default as SourceBalance } from './Home/SourceBalance/SourseBalanse';
+export { default as AddLink } from './AddList/AddList';

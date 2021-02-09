@@ -1,0 +1,26 @@
+.item {
+  position: relative;
+  width: 415px;
+  height: 92px;
+  font-style: normal;
+  font-weight: normal;
+}
+.balanceTitle {
+  padding: 16px 0 0 16px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.balanceText {
+  padding: 10px 0 0 16px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #33cc33;
+}
+.endBlock {
+  position: absolute;
+  top: 90px;
+  width: 415px;
+  height: 2px;
+  background-color: #626262;
+}

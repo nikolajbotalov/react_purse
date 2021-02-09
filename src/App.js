@@ -1,19 +1,18 @@
 import React from 'react';
-
-import './scss/app.scss';
-import { Home, AddList, Settings } from './pages';
 import { Route } from 'react-router-dom';
+import classes from './App.module.css';
 
-function App() {
+import { Home, AddLink } from './components/index';
+
+function App(props) {
   return (
-    <div className="wrapper">
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/AddList">
-        <AddList onClickItem={(...props) => console.log(...props)} />
-      </Route>
-      <Route exact path="/Settings" component={Settings} />
+    <div className={classes.appWrapper}>
+      <Route
+        exact
+        path="/"
+        render={() => <Home sourceBalance={props.state.mainPage.sourceBalance} />}
+      />
+      <Route path="/AddLink" render={() => <AddLink />} />
     </div>
   );
 }

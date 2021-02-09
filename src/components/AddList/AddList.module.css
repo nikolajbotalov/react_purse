@@ -1,0 +1,83 @@
+.header {
+  position: relative;
+  width: 415px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header a {
+  text-decoration: none;
+}
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backIcon {
+  padding: 20px 0 20px 16px;
+}
+.btnText {
+  padding: 0px 16px 0 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.endBlock {
+  position: absolute;
+  top: 64px;
+  width: 415px;
+  height: 2px;
+  background-color: #626262;
+}
+.addListContent {
+  position: absolute;
+  top: 66px;
+  width: 415px;
+}
+.addListContent input {
+  width: 411px;
+  height: 64px;
+  background-color: #626262;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.addListContent input::placeholder {
+  padding-left: 22px;
+  color: white;
+}
+.addListContent span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #626262;
+}
+.listName {
+  position: absolute;
+  left: 0;
+  top: 34px;
+}
+.listBalance {
+  position: absolute;
+  left: 0;
+  top: 184px;
+}
+.listText {
+  position: absolute;
+  left: 22px;
+  top: 118px;
+  width: 313px;
+}
+.balanceText {
+  position: absolute;
+  left: 22px;
+  top: 268px;
+  width: 313px;
+}

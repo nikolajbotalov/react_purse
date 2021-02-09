@@ -1,7 +1,7 @@
 @import '../scss/fonts';
 @import '../scss/variables';
 
-.wrapper {
+.appWrapper {
   position: relative;
   width: 415px;
   height: 712px;
@@ -13,7 +13,6 @@
   top: 0;
   width: inherit;
   height: inherit;
-  // background-color: #ccc;
   .header {
     position: absolute;
     left: 0;
@@ -21,7 +20,6 @@
     width: 383px;
     height: 32px;
     padding: 16px;
-    // background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,0 +1,162 @@
+@import '../scss/fonts';
+@import '../scss/variables';
+
+.wrapper {
+  position: relative;
+  width: 415px;
+  height: 712px;
+  background: $background;
+}
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  // background-color: #ccc;
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 383px;
+    height: 32px;
+    padding: 16px;
+    // background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    a {
+      text-decoration: none;
+    }
+    .header-btn {
+      font-family: 'Roboto';
+      font-size: 18px;
+      line-height: 21px;
+      color: $mainColor;
+    }
+  }
+  .balance-block {
+    position: absolute;
+    width: inherit;
+    height: 73px;
+    left: 0;
+    top: 64px;
+    background: $backgroundBalance;
+    span {
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $mainColor;
+    }
+  }
+  .line {
+    position: absolute;
+    width: inherit;
+    height: 2px;
+    left: 0;
+    top: 64px;
+    background-color: $backgroundBlockColor;
+  }
+  .pays-list {
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: inherit;
+    .pay-block {
+      position: relative;
+      width: inherit;
+      height: 92px;
+      .pay-name {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: $mainColor;
+      }
+      .pay-balance {
+        position: absolute;
+        left: 16px;
+        top: 53px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: $backgroundBalance;
+      }
+      .pay-line {
+        position: absolute;
+        left: 0;
+        top: 90px;
+        width: inherit;
+        height: 2px;
+        background-color: $backgroundBlockColor;
+      }
+    }
+  }
+  .list-block {
+    width: inherit;
+    height: 150px;
+    .add-list__input {
+      padding: 21px 0;
+      width: 415px;
+      border: 0;
+      background-color: $backgroundBlockColor;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      text-indent: 21px;
+      color: $mainColor;
+    }
+    .add-list__text {
+      position: absolute;
+      width: 313px;
+      left: 22px;
+      top: 83px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      color: $backgroundBlockColor;
+    }
+  }
+  .list-name__block {
+    position: absolute;
+    top: 100px;
+    .list-name__input::placeholder {
+      color: $mainColor;
+    }
+  }
+  .start-balance__block {
+    position: absolute;
+    top: 250px;
+    .start-balance__input::placeholder {
+      color: $mainColor;
+    }
+  }
+}

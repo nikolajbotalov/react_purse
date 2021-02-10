@@ -8,6 +8,7 @@ import addList from './images/addList.png';
 import settings from './images/settings.png';
 
 function Home(props) {
+  // console.log(props.balance);
   let balanceInfoElements = props.sourceBalance.map((b, i) => (
     <SourceBalance
       key={i}
@@ -29,7 +30,7 @@ function Home(props) {
       </div>
 
       <div className={classes.balanceBlock}>
-        <span>0.00</span>
+        <span>{props.currentBalance}</span>
       </div>
       <div className={classes.balanceList}>{balanceInfoElements}</div>
     </div>

@@ -40,6 +40,7 @@
 .addListContent input {
   width: 411px;
   height: 64px;
+  text-indent: 22px;
   background-color: #626262;
   border: none;
   font-style: normal;
@@ -49,7 +50,6 @@
   color: #fff;
 }
 .addListContent input::placeholder {
-  padding-left: 22px;
   color: white;
 }
 .addListContent span {

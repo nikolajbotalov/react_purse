@@ -10,9 +10,14 @@ function App(props) {
       <Route
         exact
         path="/"
-        render={() => <Home sourceBalance={props.state.mainPage.sourceBalance} />}
+        render={() => (
+          <Home
+            sourceBalance={props.state.mainPage.sourceBalance}
+            currentBalance={props.state.mainPage.balance}
+          />
+        )}
       />
-      <Route path="/AddLink" render={() => <AddLink />} />
+      <Route path="/AddLink" render={() => <AddLink addBalanceList={props.addBalanceList} />} />
     </div>
   );
 }

@@ -9,7 +9,6 @@ function AddList(props) {
   let newBalanceElement = React.createRef();
 
   let addListHandler = () => {
-    // debugger;
     let text = {
       listName: newListElement.current.value,
       balance: newBalanceElement.current.value,

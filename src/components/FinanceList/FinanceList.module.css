@@ -1,0 +1,51 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 415px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.backBtn {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 415px;
+  height: 656px;
+}
+.balanceBlock {
+  width: 415px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #33cc33;
+}
+.balanceBlock span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: #fff;
+}
+.balanceBlock button {
+  width: 73px;
+  height: 73px;
+  border: none;
+}
+.costsBtn {
+  background-color: #ff8f8f;
+}
+.incomeBtn {
+  background-color: #21ff21;
+}

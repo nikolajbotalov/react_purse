@@ -8,14 +8,9 @@ import addList from './images/addList.png';
 import settings from './images/settings.png';
 
 function Home(props) {
-  // console.log(props.balance);
+  console.log(props.sourceBalance);
   let balanceInfoElements = props.sourceBalance.map((b, i) => (
-    <SourceBalance
-      key={i}
-      id={b.id}
-      balanceName={b.balanceName}
-      currentBalance={b.currentBalance}
-    />
+    <SourceBalance key={i} id={b.id} title={b.balanceName} sum={b.currentBalance} />
   ));
 
   return (

@@ -1,17 +1,19 @@
 let state = {
+  balance: 0.0,
   mainPage: {
-    sourceBalance: [
-      // { id: 0, balanceName: 'ВТБ', currentBalance: 0.0 },
-      // { id: 1, balanceName: 'Сбербанк', currentBalance: 0.0 },
-      // { id: 2, balanceName: 'Наличные', currentBalance: 0.0 },
-    ],
-    balance: 0.0,
+    sourceBalance: [],
   },
   newListPage: {},
+  financePage: {
+    financeInfo: [
+      { id: 0, message: 'Мобильная связь', sum: 150 },
+      { id: 0, message: 'Мобильная связь', sum: 150 },
+      { id: 0, message: 'Мобильная связь', sum: 150 },
+    ],
+  },
 };
 
 export const addBalanceList = (balanceInfo) => {
-  // debugger;
   let newList = {
     id: 3,
     balanceName: balanceInfo.listName,
@@ -22,7 +24,29 @@ export const addBalanceList = (balanceInfo) => {
 };
 
 export const updateBalance = (balance) => {
-  state.mainPage.balance += +balance;
+  state.balance += +balance;
+};
+
+export const addCosts = () => {
+  let newList = {
+    id: 3,
+    message: 'Еда',
+    sum: 2000,
+    color: 'e60000',
+  };
+  state.financePage.financeInfo(newList);
+  // updateBalance();
+};
+
+export const addIncome = () => {
+  let newList = {
+    id: 3,
+    message: 'Аванс',
+    sum: 30000,
+    color: '33cc33',
+  };
+  state.financePage.financeInfo(newList);
+  // updateBalance();
 };
 
 export default state;

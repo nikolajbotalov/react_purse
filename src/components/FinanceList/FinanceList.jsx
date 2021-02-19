@@ -10,6 +10,8 @@ import incomeIcon from '../../icons/income.png';
 import { SourceBalance } from '../index';
 
 function FinanceList(props) {
+  let state = props.store.getState().financePage;
+
   let costsIncomeElements = props.financeInfo.map((c, i) => (
     <SourceBalance key={i} id={c.id} title={c.message} sum={c.sum} />
   ));
@@ -23,6 +25,8 @@ function FinanceList(props) {
             <span className={classes.btnText}>назад</span>
           </div>
         </NavLink>
+        <span className={classes.financeName}>ВТБ</span>
+        <span></span>
       </div>
       <div className={classes.content}>
         <div className={classes.balanceBlock}>
@@ -31,7 +35,7 @@ function FinanceList(props) {
               <img src={costsIcon} alt="costs img" />
             </button>
           </NavLink>
-          <span className={classes.balanceText}>{props.currentBalance}</span>
+          <span className={classes.balanceText}>{state.financeBalance}</span>
           <button className={classes.incomeBtn}>
             <img src={incomeIcon} alt="income img" />
           </button>

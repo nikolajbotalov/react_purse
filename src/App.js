@@ -17,17 +17,23 @@ function App(props) {
           />
         )}
       />
-      <Route path="/AddLink" render={() => <AddLink addBalanceList={props.addBalanceList} />} />
       <Route
-        path="/FinanceList"
+        path="/AddLink"
         render={() => (
-          <FinanceList
-            currentBalance={props.state.balance}
-            financeInfo={props.state.financePage.financeInfo}
+          <AddLink
+            addBalanceList={props.addBalanceList}
+            dispatch={props.dispatch}
+            store={props.store}
           />
         )}
       />
-      <Route path="/Costs" render={() => <Costs currentBalance={props.state.balance} />} />
+      <Route
+        path="/FinanceList"
+        render={() => (
+          <FinanceList financeInfo={props.state.financePage.financeInfo} store={props.store} />
+        )}
+      />
+      <Route path="/Costs" render={() => <Costs dispatch={props.dispatch} store={props.store} />} />
     </div>
   );
 }

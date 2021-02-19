@@ -1,19 +1,35 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './AddList.module.css';
-
 import backIcon from './images/back.png';
+import {
+  addNewBalanceListCreator,
+  updateNewListNameCreator,
+  updateNewListBalanceCreator,
+} from '../../redux/state';
 
 function AddList(props) {
-  let newListElement = React.createRef();
-  let newBalanceElement = React.createRef();
+  let state = props.store.getState().newListPage;
 
-  let addListHandler = () => {
-    let text = {
-      listName: newListElement.current.value,
-      balance: newBalanceElement.current.value,
+  // метод обновления названия фин.источника
+  const onListNameChange = (e) => {
+    let text = e.target.value;
+    props.store.dispatch(updateNewListNameCreator(text));
+  };
+
+  // метод обновления баланса фин.источника
+  const onListBalanceChange = (e) => {
+    let text = e.target.value;
+    props.store.dispatch(updateNewListBalanceCreator(text));
+  };
+
+  // метод сохранения нового лист фин.источника
+  const addNewList = () => {
+    const newBalanceList = {
+      name: state.listNameText,
+      balance: state.listBalanceText,
     };
-    props.addBalanceList(text);
+    props.store.dispatch(addNewBalanceListCreator(newBalanceList.name, newBalanceList.balance));
   };
 
   return (
@@ -26,7 +42,7 @@ function AddList(props) {
           </div>
         </NavLink>
         <NavLink to="/">
-          <span onClick={addListHandler} className={classes.btnText}>
+          <span onClick={addNewList} className={classes.btnText}>
             сохранить
           </span>
         </NavLink>
@@ -35,18 +51,18 @@ function AddList(props) {
       <div className={classes.addListContent}>
         <input
           type="text"
-          ref={newListElement}
           placeholder="Имя списка"
           className={classes.listName}
+          onChange={onListNameChange}
         />
         <span className={classes.listText}>
           Укажите название списка для счета (Наличные, карта)
         </span>
         <input
           type="text"
-          ref={newBalanceElement}
           placeholder="Начальный баланс"
           className={classes.listBalance}
+          onChange={onListBalanceChange}
         />
         <span className={classes.balanceText}>Укажите начальный баланс счета (Бюджет)</span>
       </div>

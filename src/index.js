@@ -4,13 +4,18 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.scss';
 import App from './App';
-import state, { addBalanceList } from './redux/state';
+import store from './redux/state';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App state={state} addBalanceList={addBalanceList} />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+let rerenderEntireTree = (state) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
+      </BrowserRouter>
+    </React.StrictMode>,
+    document.getElementById('root'),
+  );
+};
+
+rerenderEntireTree(store.getState());
+store.subscriber(rerenderEntireTree);

@@ -6,15 +6,23 @@
   height: 64px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .backBtn {
-  margin-left: 16px;
+  margin-left: 10px;
   text-decoration: none;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.financeName {
+  margin-right: 50px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
 }
 .content {
   position: absolute;
